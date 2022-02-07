@@ -1,0 +1,8 @@
+﻿@if(ShopBaBy.Message.has_flash())
+{
+    ShopBaBy.MessageModel ms = ShopBaBy.Message.get_flash();
+<div class="float-left ">
+    <span class=" ml-3  text-@ms.msg_css">@ms.msg</span>
+</div>
+}
+
