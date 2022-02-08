@@ -50,10 +50,10 @@ namespace ShopBaBy.Controllers
             return View("category", catid);
         }
 
-        public ActionResult detail( String slug)
+        public ActionResult detail( int ID)
         {
-            var list = db.Products.Where(m => m.status == 1 && m.slug == slug).First();
-            return View(list);
+            var list = db.Products.Where(m => m.status == 1 && m.ID == ID).First();
+            return View("~/Views/Site/ProductDetail.cshtml", list);
         }
         public ActionResult cungloai(int catid)
         {

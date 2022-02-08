@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using System.Web.Routing;
 
 namespace ShopBaBy
@@ -13,6 +9,16 @@ namespace ShopBaBy
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            routes.MapRoute(
+            name: "chi tiet",
+            url: "chi-tiet/{slug}-{ID}",
+            defaults: new { controller = "SanPham", action = "detail", ID = UrlParameter.Optional }
+         );
+            routes.MapRoute(
+            name: "loai san pham",
+            url: "loai-san-pham/{slug}-{ID}",
+            defaults: new { controller = "SanPham", action = "detail", ID = UrlParameter.Optional }
+         );
 
             routes.MapRoute(
             name: "them sp yeu thich",
@@ -22,17 +28,17 @@ namespace ShopBaBy
             );
 
             routes.MapRoute(
-           name: "send mail to user",
-           url: "send-mail-to-user",
-           defaults: new { controller = "Auth", action = "sendMail", id = UrlParameter.Optional },
-           new[] { "ShopBaBy.Controllers" }
-           );
+            name: "send mail to user",
+            url: "send-mail-to-user",
+            defaults: new { controller = "Auth", action = "sendMail", id = UrlParameter.Optional },
+            new[] { "ShopBaBy.Controllers" }
+         );
             routes.MapRoute(
            name: "huy thanh toan online",
            url: "cancel-order",
            defaults: new { controller = "Checkout", action = "cancel_order", id = UrlParameter.Optional },
            new[] { "ShopBaBy.Controllers" }
-           );
+        );
             routes.MapRoute(
            name: "thanh toan thanh cong",
            url: "confirm-orderPaymentOnline",
@@ -53,7 +59,7 @@ namespace ShopBaBy
             url: "xoa-gio-hang",
             defaults: new { controller = "Cart", action = "deleteitem", id = UrlParameter.Optional },
             new[] { "ShopBaBy.Controllers" }
-            );
+        );
 
             routes.MapRoute(
             name: "them vao gio hang",
@@ -62,17 +68,17 @@ namespace ShopBaBy
             new[] { "ShopBaBy.Controllers" }
         );
             routes.MapRoute(
-          name: "gio hang",
-          url: "gio-hang",
-          defaults: new { controller = "Cart", action = "Index", id = UrlParameter.Optional },
-         new[] { "ShopBaBy.Controllers" }
+            name: "gio hang",
+            url: "gio-hang",
+            defaults: new { controller = "Cart", action = "Index", id = UrlParameter.Optional },
+            new[] { "ShopBaBy.Controllers" }
         );
             routes.MapRoute(
              name: "Thanh toán",
              url: "Thanh-toan",
              defaults: new { controller = "checkout", action = "index", id = UrlParameter.Optional },
-        new[] { "ShopBaBy.Controllers" }
-       );
+            new[] { "ShopBaBy.Controllers" }
+        );
             routes.MapRoute(
              name: "bai viet",
              url: "bai-viet",
@@ -84,15 +90,14 @@ namespace ShopBaBy
               name: "Lien He",
               url: "lien-he",
               defaults: new { controller = "Lienhe", action = "Index", id = UrlParameter.Optional }
-          );
+        );
 
             routes.MapRoute(
-        name: "mat khau moi",
-        url: "newPass/{id}",
-        defaults: new { controller = "Auth", action = "newPasswordFG", id = UrlParameter.Optional },
-         new[] { "ShopBaBy.Controllers" }
-    );
-
+            name: "mat khau moi",
+            url: "newPass/{id}",
+            defaults: new { controller = "Auth", action = "newPasswordFG", id = UrlParameter.Optional },
+            new[] { "ShopBaBy.Controllers" }
+        );
             routes.MapRoute(
              name: "doi mat khau",
              url: "doi-mat-khau/{id}",
@@ -107,21 +112,15 @@ namespace ShopBaBy
              new[] { "ShopBaBy.Controllers" }
           );
             routes.MapRoute(
-          name: "search",
-          url: "sanpham/search",
-          defaults: new { controller = "Sanpham", action = "SearchProduct", id = UrlParameter.Optional }
+            name: "search",
+            url: "sanpham/search",
+            defaults: new { controller = "Sanpham", action = "SearchProduct", id = UrlParameter.Optional }
         );
             routes.MapRoute(
             name: "san pham",
             url: "sanpham",
             defaults: new { controller = "Sanpham", action = "index", id = UrlParameter.Optional }
-          );
-
-        routes.MapRoute(
-            name: "chi tiet",
-            url: "chi-tiet/{id}",
-            defaults: new { controller = "Site", action = "ProductDetail", id = UrlParameter.Optional }
-         );
+        );
             routes.MapRoute(
              name: "logout",
              url: "logout",

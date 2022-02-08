@@ -13,13 +13,13 @@
                         <div class="arrow-up">
                             <span class=" text-white pl-3">-@sale%</span>
                         </div>
-                        <a href="~/@item.slug"><img class="card-img-top" src="~/public/images/@item.img" alt="Card image"></a>
+                        <a href="@item.slug-@item.ID"><img class="card-img-top" src="~/public/images/@item.img" alt="Card image"></a>
                     </div>
                     <div class="card-title text-dark pt-1"><h6><a href="~/@item.slug" class="text-danger">@item.name</a></h6></div>
                     <div class="card-title text-dark">
                         <h6 class="font-weight-bold"><strike> @item.price.ToString("N0") VND </strike></h6>
                         <h6 class="font-weight-bold text-danger"> @price.ToString("N0") VND</h6>
-                        <a href="@item.slug" class="btn btn-sm btn-success">Xem chi tiết</a>
+                        <a href="@item.slug-@item.ID" class="btn btn-sm btn-success">Xem chi tiết</a>
                      
                         <input type="hidden" value="1" id="sel1" />
                     </div>
@@ -33,12 +33,12 @@
             <div class="card">
                 <div class="card-body">
                     <div class="position-relative">
-                        <a href="~/@item.slug"><img class="card-img-top" src="~/public/images/@item.img" alt="Card image"></a>
+                        <a href="@item.slug-@item.ID"><img class="card-img-top" src="~/public/images/@item.img" alt="Card image"></a>
                     </div>
                     <div class="card-title text-dark pt-1"><h6><a href="~/@item.slug" class="text-danger">@item.name</a></h6></div>
                     <div class="card-title text-dark">
                         <h6 class="font-weight-bold text-orange"> @item.price.ToString("N0") VND </h6>
-                        <a href="@item.slug" class="btn btn-sm btn-success">Xem chi tiết</a>
+                        <a href="@item.slug-@item.ID" class="btn btn-sm btn-success">Xem chi tiết</a>
                         <input type="hidden" value="1" id="sel1" />
                     </div>
                 </div>

@@ -26,7 +26,8 @@ namespace ShopBaBy.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=NGUYEN-HAI-DUC;Initial Catalog=ShopMayTinh;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=NGUYEN-HAI-DUC;Initial Catalog=ShopQuanAoTreEm;Integrated Security=Tr" +
+            "ue")]
         public string ChuoiKn {
             get {
                 return ((string)(this["ChuoiKn"]));
